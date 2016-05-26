@@ -18,5 +18,10 @@ npm build
 ``` 
 Add your code to component and open index.html
 ``` 
+# npm publish failed 403
+you may use some other source of npm , you can reset your npm register
+``` 
+npm config set registry http://registry.npmjs.org
+``` 
 # License
 MIT(http://www.opensource.org/licenses/mit-license.php)

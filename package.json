@@ -1,5 +1,5 @@
 {
-  "name": "weibo",
+  "name": "weibo-react-app",
   "version": "0.0.1",
   "description": "rebuild a weibo app for practicing",
   "main": "webpack.config.js",
@@ -35,6 +35,6 @@
     "style-loader": "^0.13.1",
     "webpack-dev-server": "^1.14.1"
   },
-  "author": "Jonnes Wong",
+  "author": "jonnes",
   "license": "ISC"
 }

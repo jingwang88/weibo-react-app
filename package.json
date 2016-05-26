@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "rebuild a weibo app for practicing",
   "main": "webpack.config.js",
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/jingwang88/weibo-react-app.git"
+  },
   "scripts": {
     "start": "wepack-dev-server --hot --progress --colors",
     "build": "webpack --progress --colors"

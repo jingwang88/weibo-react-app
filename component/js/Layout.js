@@ -10,8 +10,8 @@ export default class Layout extends React.Component {
 		super();
 		this.state = {
 			img: 'http://tva1.sinaimg.cn/crop.0.0.180.180.50/7fde8b93jw1e8qgp5bmzyj2050050aa8.jpg',
-			repostNumber: 0,
-			commentNumber: 0,
+			repostNumber: 1,
+			commentNumber: 1,
 			likerNumber: 0,
 			personalPage: 'http://weibo.com/mayun?from=profile&wvr=6',
 			nickName: 'Mr. Ma',
@@ -23,12 +23,15 @@ export default class Layout extends React.Component {
 	render () {
 		return (
 			<div>
-				<Header img={this.state.img}/>
-				<div>
-					<Title personalPage={this.state.personalPage} nickName={this.state.nickName}/>
-					<Information time={this.state.time} source={this.state.source}/>
-					<Content content={this.state.content}/> 
+				<div className="up-content">
+					<Header img={this.state.img}/>
+					<div className="right-content">
+						<Title personalPage={this.state.personalPage} nickName={this.state.nickName}/>
+						<Information time={this.state.time} source={this.state.source}/>
+						<Content content={this.state.content}/> 
+					</div>
 				</div>
+				
 				<FnBanner repostNumber={this.state.repostNumber} commentNumber={this.state.commentNumber} likerNumber={this.state.likerNumber}/>
 			</div>
 		);

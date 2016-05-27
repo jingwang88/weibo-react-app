@@ -5,6 +5,7 @@ module.exports = {
 	context: __dirname,
 	devtool: debug ? "inline-sourcemap" : null,
 	entry: './component/client.js',
+	
 	output: {
 		path: __dirname + '/src/',
 		filename: 'client.min.js'
@@ -16,12 +17,8 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				loader: 'babel-loader',
-				exclude: /(node_modules|bower_components)/,
-				query: {
-					presets: ['react', 'es2015', 'stage-0'],
-					plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-				}
+				loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'],
+				exclude: /(node_modules|bower_components)/
 			},
 			{
 				test: /\.css$/,
@@ -44,6 +41,8 @@ module.exports = {
 	plugins: debug ? [] : [
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false})
+		new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false}),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoErrorsPlugin()
 	]
 }

@@ -1,8 +1,9 @@
 #app {
 	width: 50%;
-	background-color: #999;
+	border: 1px solid;
 }
 .up-content {
+	margin: 10px;
 	&:after {
 		content: "";
 		display: block;
@@ -18,61 +19,74 @@
 }
 .right-content {
 	float: left;
-	padding: 5px 10px;
-	width: 75%;
-	background-color: red;
+	width: 88%;
+	margin: 5px;
 	p {
-		line-height: 14px;
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+	}
+	.title {
+		height: 18px;
+		margin-bottom: 7px;
+		font-size: 14px;
+		padding-top: 5px;
 	}
 	.information {
-		color: #38547b;
+		height: 15px;
+		margin-bottom: 2px;
+		color: #808080;
 		font-size: 12px;
-		font-family: 'Arial Microsoft YaHei';
+		font-family: Arial, 'Microsoft YaHei';
 		a {
 			cursor: pointer;
 		}
 	}
 	.content {
+		color: #333;
 		font-size: 14px;
+		font-family: Arial, 'Microsoft YaHei';
 		line-height: 23px;
 	}
 	
 }
-.title a {
-	margin-left: 3px;
-	vertical-align: -2px;
-	color: white;
-	font-size: 14px;
-	font-weight: 2px;
-	text-decoration: none;
+.title {
+	a {
+		text-decoration: none;
+		i {
+			display: inline-block;
+			margin-left: 2px;
+			vertical-align: -2px;
+			width: 16px;
+			height: 14px;
+			background-image: url('../source/icon.png');
+		}
+	}
+	.nick-name {
+		color: #333;
+		font-weight: 700;
+	}
 	.identifiction {
-		width: 14px;
-		height: 14px;
-		background-image: url('../source/icon.png');
 		background-position: 0 -75px;
 	}
 	.member {
-		width: 16px;
-		height: 14px;
-		background-image: url('../source/icon.png');
 		background-position: -25px -75px;
 	}
 	.camera {
-		width: 16px;
-		height: 14px;
-		background-image: url('../source/icon.png');
 		background-position: -25px -150px;
 	}
 }
 .function-banner {
 	width: 100%;
 	height: 33px;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #eee;
 	list-style: none;
 	li {
-		display: block;
-		width: 25%;
-		height: 33px;
+		padding-top: 10px;
+		margin: 0 11%;
 		float: left;
-		font-color: 12px;
+		color: #999;
+		font-size: 12px;
 	}
 }

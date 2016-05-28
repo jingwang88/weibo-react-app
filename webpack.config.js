@@ -5,7 +5,6 @@ module.exports = {
 	context: __dirname,
 	devtool: debug ? "inline-sourcemap" : null,
 	entry: './component/client.js',
-	
 	output: {
 		path: __dirname + '/src/',
 		filename: 'client.min.js'
@@ -17,7 +16,7 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015,presets[]=stage-0'],
+				loader: 'babel?presets[]=react,presets[]=es2015,presets[]=stage-0',
 				exclude: /(node_modules|bower_components)/
 			},
 			{

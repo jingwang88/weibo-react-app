@@ -17,7 +17,8 @@ export default class Layout extends React.Component {
 			nickName: '青春如歌',
 			time: '5月6日',
 			source: '魅族MX4',
-			content: '这是weibo-react-app 的测试,我现在在哪里？我继续握住听筒台起脸来，看看电话亭的四周。如今我在什么地方？我不知道那是什么地方。我猜不看。到底这里是那里？映入我眼帘的只是不知何处去的人们，行色匆匆地从我身边走过去。而我只能站在那个不知名的地方，不停地呼唤绿子的名字。'
+			content: '这是weibo-react-app 的测试,我现在在哪里？我继续握住听筒台起脸来，看看电话亭的四周。如今我在什么地方？我不知道那是什么地方。我猜不看。到底这里是那里？映入我眼帘的只是不知何处去的人们，行色匆匆地从我身边走过去。而我只能站在那个不知名的地方，不停地呼唤绿子的名字。',
+			isDisplay: [false, true,false]
 		};
 	}
 	render () {
@@ -26,7 +27,7 @@ export default class Layout extends React.Component {
 				<div className="up-content">
 					<Header img={this.state.img}/>
 					<div className="right-content">
-						<Title personalPage={this.state.personalPage} nickName={this.state.nickName}/>
+						<Title personalPage={this.state.personalPage} nickName={this.state.nickName} isDisplay={this.state.isDisplay}/>
 						<Information time={this.state.time} source={this.state.source}/>
 						<Content content={this.state.content}/> 
 					</div>

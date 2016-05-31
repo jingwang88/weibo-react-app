@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { render } from 'react-dom';
-import Layout from './js/Layout';
+import Layout from './js/weibo_content/WeiboContentLayout';
 require('./css/main.less');
 
-render(<Layout />, document.getElementById('app'));
+render(<WeiboContentLayout />, document.getElementById('app'));

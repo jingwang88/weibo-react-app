@@ -23,7 +23,7 @@ export default class WeiboContentLayout extends React.Component {
 	}
 	render () {
 		return (
-			<div>
+			<div   className="weibo-content">
 				<div className="up-content">
 					<Header img={this.state.img}/>
 					<div className="right-content">

@@ -79,10 +79,10 @@ export default class FnBanner extends React.Component {
 	render () {
 		return (
 			<ul className="function-banner">
-				<li className="collect func" onClick={this.clickHandler.bind(this)}><i className="colle-icon fn-icon">û</i>收藏</li>
-				<li className="repost func"onClick={this.clickHandler.bind(this)}><i className="repo-icon fn-icon" ></i>{this.state.repostNumber}</li>
-				<li className="comments func"  onClick={this.clickHandler.bind(this)}><i className="comet-icon fn-icon"></i>{this.state.commentNumber}</li>
-				<li className="like func" onClick={this.clickHandler.bind(this)}><i className="like-icon fn-icon"></i>{this.state.likerNumber}</li>
+				<li className="collect func" onClick={this.clickHandler.bind(this)}><em className="colle-icon fn-icon">û</em>收藏</li>
+				<li className="repost func"onClick={this.clickHandler.bind(this)}><em className="repo-icon fn-icon" ></em>{this.state.repostNumber}</li>
+				<li className="comments func"  onClick={this.clickHandler.bind(this)}><em className="comet-icon fn-icon"></em>{this.state.commentNumber}</li>
+				<li className="like func" onClick={this.clickHandler.bind(this)}><em className="like-icon fn-icon"></em>{this.state.likerNumber}</li>
 			</ul>
 		);
 	}

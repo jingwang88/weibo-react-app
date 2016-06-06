@@ -5,5 +5,7 @@ require('./css/left_content.less')
 require('./css/weibo_content.less');
 require('./css/navigator.less');
 require('./css/main.less');
+require('./css/create_weibo.less');
 
 render(<Layout />, document.getElementById('app'));
+

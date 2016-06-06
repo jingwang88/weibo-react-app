@@ -22,7 +22,7 @@ export default class LeftContent extends React.Component {
 						<li><em>D</em>{this.props.options[3]}</li>
 						<li><em>D</em>{this.props.options[4]}</li>
 					</ul>
-					<span>展开</span>
+					<span className="toggleCategory">展开</span>
 				</div>
 			</div>
 		);

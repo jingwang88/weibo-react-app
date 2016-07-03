@@ -3,6 +3,7 @@ import Navigator from './js/navigator/Navigator';
 import WeiboContentLayout from './js/weibo_content/WeiboContentLayout';
 import LeftContent from './js/Left_content/LeftContent';
 import WeiboInput from './js/create_weibo/WeiboInput.js';
+import RightContent from './js/right_content/RightContent.js'
 
 export default class Layout extends React.Component {
 	constructor () {
@@ -20,7 +21,9 @@ export default class Layout extends React.Component {
 				{/*<LeftContent options={this.state.options}/>*/}
 				{/*<WeiboContentLayout />*/}
 				{/*<WeiboInput hotWeibo={this.state.hotWeibo}/>*/}
+				<RightContent />
 			</div>
 		);
 	}
 }
+

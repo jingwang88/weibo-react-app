@@ -1,0 +1,94 @@
+.person-info-card {
+	position: absolute;
+	left: 200px;
+	top: 200px;
+	width: 230px;
+	height: 164px;
+	background-color: white;
+}
+.up-background {
+	width: 230px;
+	height: 76px;
+	background-image: url("http://img.t.sinajs.cn/t6/skin/skin048/images/profile_cover_s.jpg?version=2e6bbd68c02c8874");
+}
+.down-info {
+	position: relative;
+	top: -40px;
+	width: 230px;
+	.head-picture {
+		img {
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			-moz-border-radius: 50%;
+		}
+		width: 60px;
+		margin: 0 auto;
+	}
+	.nick-vip-level {
+		width: 120px;
+		margin: 0 auto;
+		.nick {
+			font-size: 14px;
+			font-weight: bold;
+			color: #333;
+		}
+		.vip {
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			margin: 0 4px;
+			background-image: url("../source/icon.png");
+			background-position: 0 -200px;
+		}
+		.level {
+			display: inline-block;
+			width: 40px;
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			font-style: italic;
+			border-radius: 7px;
+			background-color: #eb7350;
+			color: #fff;
+		}
+	}
+	.follow-follower-weibo-nums {
+		list-style: none;
+		padding: 0;
+		width: 197px;
+		margin: 0 auto;
+		li {
+			float: left;
+			width: 65px;
+			text-align: center;
+			span.numbers {
+				display: block;
+				font-size: 16px;
+				font-weight: bold;
+				color: #333;
+				&:hover {
+					cursor: pointer;
+					color: #eb7350;
+				}
+			}
+			span.keyword {
+				display: block;
+				font-size: 12px;
+				color: #808080;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.follower {
+			border-left: 1px solid rgba(0, 0, 0, 0.16);
+			border-right: 1px solid rgba(0, 0, 0, 0.16);
+		}
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+}

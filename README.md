@@ -1,4 +1,4 @@
-# weibo-react-app
+1# weibo-react-app
 This is a simple template for building Weibo React app. 
 # How to use it ?
 1.Clone the repo:

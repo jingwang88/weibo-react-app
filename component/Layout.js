@@ -3,11 +3,11 @@ import Navigator from './js/navigator/Navigator';
 import WeiboContentLayout from './js/weibo_content/WeiboContentLayout';
 import LeftContent from './js/Left_content/LeftContent';
 import WeiboInput from './js/create_weibo/WeiboInput.js';
-import RightContent from './js/right_content/RightContent.js'
+import RightContent from './js/right_content/RightContent.js';
 
-export default class Layout extends React.Component {
-	constructor () {
-		super();
+export default class Layout extends Component {
+	constructor (props) {
+		super(props);
 		this.state = {
 			name: "青春如歌",
 			options: ["娱乐", "媒体", "美女", "正能量", "购物", "旅游", "欧美", "字幕组", "明星"],

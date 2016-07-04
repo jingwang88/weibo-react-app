@@ -3,7 +3,6 @@ import PersonCard from './PersonCard.js';
 import NewSongList from './NewSongList.js';
 import HotTopic from './HotTopic.js';
 import FriendFollowStatus from './FriendFollowStatus.js';
-import CelebrityRanking from './CelebrityRanking.js';
 import Announcement from './Announcement.js';
 
 export default class RightContent extends Component {
@@ -15,35 +14,41 @@ export default class RightContent extends Component {
 			weiboNumber: 122,
 			newSongList: [
 				{
-					bookName: "晚安.当一切入睡",
-					author: "毕淑敏",
-					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9326411/100x150x75x0.jpg",
-					rankScore: "172231分"
+					bookName: "和爸爸一起读书",
+					author: "[美]理查德•乔根森(著)",
+					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9309975/100x150x75x0.jpg",
+					rankScore: "172231"
 				},
 				{
-					bookName: "原来你还在这里（全两册）",
-					author: "辛夷坞",
-					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9322886/100x150x75x0.jpg",
-					rankScore: "157210分"
+					bookName: "伊伊，端午节快乐！",
+					author: "丁丁，梁琨（绘)",
+					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9322989/100x150x75x0.jpg",
+					rankScore: "1681472分"
 				},
 				{
-					bookName: "穿越人海拥抱你",
-					author: "苑子文,苑子豪",
+					bookName: "小驴托托·第一辑：我的第一个好朋友系列",
+					author: "[法]贝内迪克特·古提艾(著),谢逢蓓(译)",
 					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9310232/100x150x75x0.jpg",
-					rankScore: "151442分"
+					rankScore: "1072681分"
 				}
-			]
+			],
+			hotTopics: ['几时放假可视对讲','阿萨德发的','大发','是打发后','更好地方','大法师','俺的沙发的说法是否','打发斯蒂芬','个电饭锅电饭锅','俺的沙发的说法是否'],
+			ffriendStatus: {
+				latestFollower: '@sdjfak',
+				latestFollowerNum: 25000,
+				youFollow: '@youFollow'
+			},
+			announcements: ['全国辟谣平台', '首都互联网协会发布坚守七条底线倡议书']
 		}
 	}
 	render () {
 		return (
 			<div>
-				{/*<PersonCard followNumber={this.state.followNumber} followerNumber={this.state.followerNumber} weiboNumber={this.state.weiboNumber}/>*/}
-				<NewSongList newSongList={this.state.newSongList}/>
-				{/*<HotTopic />
-				<FriendFollowStatus />
-				<CelebrityRanking />
-				<Announcement />*/}
+{/*				<PersonCard followNumber={this.state.followNumber} followerNumber={this.state.followerNumber} weiboNumber={this.state.weiboNumber}/>
+*/}				<NewSongList newSongList={this.state.newSongList}/>
+				{/*<HotTopic hotTopics={this.state.hotTopics}/>
+				<FriendFollowStatus ffriendStatus={this.state.ffriendStatus}/>
+				<Announcement announcements={this.state.announcements}/>*/}
 		</div>
 		);
 	}

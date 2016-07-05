@@ -23,16 +23,45 @@ export default class RightContent extends Component {
 					bookName: "伊伊，端午节快乐！",
 					author: "丁丁，梁琨（绘)",
 					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9322989/100x150x75x0.jpg",
-					rankScore: "1681472分"
+					rankScore: "1681472"
 				},
 				{
 					bookName: "小驴托托·第一辑：我的第一个好朋友系列",
 					author: "[法]贝内迪克特·古提艾(著),谢逢蓓(译)",
 					img: "http://sinastorage.com/vipbook.sinaedge.com/cimg/bookpage/9310232/100x150x75x0.jpg",
-					rankScore: "1072681分"
+					rankScore: "1072681"
 				}
 			],
-			hotTopics: ['几时放假可视对讲','阿萨德发的','大发','是打发后','更好地方','大法师','俺的沙发的说法是否','打发斯蒂芬','个电饭锅电饭锅','俺的沙发的说法是否'],
+			hotTopics: [
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+				{
+					title: '几时放假可视对讲',
+					hotDegree: 10000
+				},
+			],
 			ffriendStatus: {
 				latestFollower: '@sdjfak',
 				latestFollowerNum: 25000,
@@ -46,8 +75,8 @@ export default class RightContent extends Component {
 			<div>
 {/*				<PersonCard followNumber={this.state.followNumber} followerNumber={this.state.followerNumber} weiboNumber={this.state.weiboNumber}/>
 */}				<NewSongList newSongList={this.state.newSongList}/>
-				{/*<HotTopic hotTopics={this.state.hotTopics}/>
-				<FriendFollowStatus ffriendStatus={this.state.ffriendStatus}/>
+				<HotTopic hotTopics={this.state.hotTopics}/>
+				{/*<FriendFollowStatus ffriendStatus={this.state.ffriendStatus}/>
 				<Announcement announcements={this.state.announcements}/>*/}
 		</div>
 		);

@@ -2,15 +2,17 @@ import React, {Component} from 'react';
 
 export default class HotTopic extends Component {
 	render () {
+		let i = 0;
 		return (
-			<div className="hot-topic clearfix">
-				<div className="hot-topic-title"><p className="title clearfix">热门话题</p><p className="refresh clearfix"><em>e</em>换一换</p></div>
+			<div className="hot-topic right_content_block">
+				<div className="hot-topic-title clearfix"><p className="title">热门话题</p><p className="refresh"><em>e</em>换一换</p></div>
 				<ul className="host-topic-item">
 					{
 						this.props.hotTopics.map((hotTopic) => {
 							return (
-								<li>
-									<span>#{ hotTopic.title }# </span><span>{ hotTopic.hotDegree}</span>
+								<li className="item clearfix" key={i++}>
+									<span className="name">#{ hotTopic.name }# </span>
+									<span className="hotDegree">{ hotTopic.hotDegree}</span>
 								</li>
 							);
 						})

@@ -34,31 +34,31 @@ export default class RightContent extends Component {
 			],
 			hotTopics: [
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 				{
-					title: '几时放假可视对讲',
+					name: '几时放假可视对讲',
 					hotDegree: 10000
 				},
 			],
@@ -67,18 +67,40 @@ export default class RightContent extends Component {
 				latestFollowerNum: 25000,
 				youFollow: '@youFollow'
 			},
+			personCard: [
+				{
+					headerPic: "http://tva3.sinaimg.cn/crop.12.4.574.574.50/b017f5b4gw1ecfwitm7inj20hs0howhc.jpg",
+					id: "Fitpics",
+					description: "分享大量无水印健身励志美图。这里只有美好的身体。欢迎健身者拍图私信投稿。图片整理搬运自网络和粉丝..."
+				},
+				{
+					headerPic: "http://tva4.sinaimg.cn/crop.0.0.717.717.50/949ab826jw8evw4frb9elj20jx0jxmz7.jpg",
+					id: "果邮水果小店招-代理",
+					description: "车厘子优惠代理卖疯了，百种进口水果，想吃、加盟加V：guoyou365"
+				},
+				{
+					headerPic: "http://tva1.sinaimg.cn/crop.0.1.750.750.50/d419c9e3jw8f3qe6zc48gj20ku0kwq3k.jpg",
+					id: "炉石葫芦呼噜",
+					description: "Team WE电子竞技俱乐部炉石传说分部队员"
+				},
+				{
+					headerPic: "http://tva2.sinaimg.cn/crop.56.0.134.134.50/c039055agw1es0h3c5asxj206o03r74a.jpg",
+					id: "NLPJob",
+					description: "www.nlpjob.com ; 微信公众号nlpjob; 关注自然语言处理, 机器学习等相关领域的工作机会。"
+				}
+			],
 			announcements: ['全国辟谣平台', '首都互联网协会发布坚守七条底线倡议书']
 		}
 	}
 	render () {
 		return (
-			<div>
-{/*				<PersonCard followNumber={this.state.followNumber} followerNumber={this.state.followerNumber} weiboNumber={this.state.weiboNumber}/>
-*/}				<NewSongList newSongList={this.state.newSongList}/>
-				<HotTopic hotTopics={this.state.hotTopics}/>
-				{/*<FriendFollowStatus ffriendStatus={this.state.ffriendStatus}/>
-				<Announcement announcements={this.state.announcements}/>*/}
-		</div>
+			<div className="right-content">
+				<PersonCard followNumber={this.state.followNumber} followerNumber={this.state.followerNumber} weiboNumber={this.state.weiboNumber}/>
+				<NewSongList newSongList={this.state.newSongList}/>
+				<HotTopic hotTopics={this.state.hotTopics}/>	
+				<FriendFollowStatus ffriendStatus={this.state.ffriendStatus} personCard={this.state.personCard}/>
+				<Announcement announcements={this.state.announcements}/>
+			</div>
 		);
 	}
 }

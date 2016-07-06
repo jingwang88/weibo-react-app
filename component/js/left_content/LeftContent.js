@@ -4,7 +4,7 @@ export default class LeftContent extends React.Component {
 
 	render () {
 		return (
-			<div className="leftContent">
+			<div className="left-content">
 				<ul className="up-category category">
 					<li>首页<em></em></li>
 					<li>收藏<em></em></li>

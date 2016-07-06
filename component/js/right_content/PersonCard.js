@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 export default class PersonCard extends Component {
 	render () {
 		return (
-			<div className="person-info-card">
+			<div className="person-info-card right_content_block">
 				<div className="up-background"></div>
 				<div className="down-info">
 					<div className="head-picture"><img src="../component/source/head.jpg"/></div>

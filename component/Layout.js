@@ -16,11 +16,26 @@ export default class Layout extends Component {
 	}
 	render () {
 		return (
-			<div className="container">
+			<div className="container clearfix">
 				<Navigator name={this.state.name} />
-				{/*<LeftContent options={this.state.options}/>*/}
-				{/*<WeiboContentLayout />*/}
-				{/*<WeiboInput hotWeibo={this.state.hotWeibo}/>*/}
+				<LeftContent options={this.state.options}/>
+				<div className="middle-content">
+					<WeiboInput hotWeibo={this.state.hotWeibo}/>
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+					<WeiboContentLayout />
+				</div>
 				<RightContent />
 			</div>
 		);

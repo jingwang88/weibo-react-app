@@ -3,52 +3,52 @@ import React, {Component} from 'react';
 export default class FriendFollowStatus extends Component {
 	render () {
 		return (
-			<div className="friend-follow-stauts">
+			<div className="friend-follow-stauts  right_content_block">
 				<div className="ffollow-stauts-title">好友关注动态</div>
-				<img src="#"/>
-				<ul>
-					<li>
-						<p>{this.props.ffriendStatus.latestFollower}等{this.props.ffriendStatus.latestFollowerNum}人关注了</p>
-						<div>
-							<img />
-							<div>
-								<span></span>
-								<span></span>
+				<span className="ffollow-stauts-titleImg"></span>
+				<ul className="ffollow-stauts-item">
+					<li className="latest-follow item">
+						<p><span className="person">{this.props.ffriendStatus.latestFollower}</span>等<span>{this.props.ffriendStatus.latestFollowerNum}</span>人关注了</p>
+						<div className="simple-personCard">
+							<img src={this.props.personCard[0].headerPic}/>
+							<div className="personCard-info">
+								<span  className="person">{this.props.personCard[0].id}</span>
+								<span>{this.props.personCard[0].description}</span>
 							</div>
-							<span><em></em> 关注</span>
+							<span className="follow"><em>+</em>关注</span>
 						</div>
 					</li>
-					<li>
+					<li className="today-recommend item">
 						<p>今日推荐</p>
-						<div>
-							<img />
-							<div>
-								<span></span>
-								<span></span>
+						<div className="simple-personCard">
+							<img src={this.props.personCard[1].headerPic}/>
+							<div className="personCard-info">
+								<span  className="person">{this.props.personCard[1].id}</span>
+								<span>{this.props.personCard[1].description}</span>
 							</div>
-							<span><em></em> 关注</span>
+							<span className="follow"><em>+</em> 关注</span>
 						</div>
 					</li>
-					<li>
-						<p>{this.props.ffriendStatus.youFollow}也关注</p>
-						<div>
-							<img />
-							<div>
-								<span></span>
-								<span></span>
+					<li className="you-follow item">
+						<p><span  className="person">{this.props.ffriendStatus.youFollow}</span>也关注</p>
+						<div className="simple-personCard">
+							<img src={this.props.personCard[2].headerPic}/>
+							<div className="personCard-info">
+								<span className="person">{this.props.personCard[2].id}</span>
+								<span>{this.props.personCard[2].description}</span>
 							</div>
-							<span><em></em> 关注</span>
+							<span className="follow"><em>+</em> 关注</span>
 						</div>
 					</li>
-					<li>
+					<li className="you-like item">
 						<p>你赞过他的微博</p>
-						<div>
-							<img />
-							<div>
-								<span></span>
-								<span></span>
+						<div className="simple-personCard">
+							<img src={this.props.personCard[3].headerPic}/>
+							<div className="personCard-info">
+								<span  className="person">{this.props.personCard[3].id}</span>
+								<span>{this.props.personCard[3].description}</span>
 							</div>
-							<span><em></em> 关注</span>
+							<span className="follow"><em>+</em> 关注</span>
 						</div>
 					</li>
 				</ul>

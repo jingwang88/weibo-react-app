@@ -10,6 +10,6 @@ require('./css/right_content_person_card.less');
 require('./css/right_content_newSongList.less');
 require('./css/right_content_friendFollowStatus.less');
 require('./css/right_content_hotTopic.less');
-require('./css/right_content_newSongList.less');
+require('./css/right_content_announcement.less');
 
 render(<Layout />, document.getElementById('app'));

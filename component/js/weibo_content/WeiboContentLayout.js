@@ -6,8 +6,8 @@ import Information from './right_content/Information';
 import Title from './right_content/Title';
 
 export default class WeiboContentLayout extends React.Component {
-	constructor () {
-		super();
+	constructor (props) {
+		super(props);
 		this.state = {
 			img: 'http://tva1.sinaimg.cn/crop.0.0.180.180.50/7fde8b93jw1e8qgp5bmzyj2050050aa8.jpg',
 			repostNumber: 1,
@@ -26,7 +26,7 @@ export default class WeiboContentLayout extends React.Component {
 			<div className="weibo-content">
 				<div className="up-content">
 					<Header img={this.state.img}/>
-					<div className="right-content">
+					<div className="right-part">
 						<Title personalPage={this.state.personalPage} nickName={this.state.nickName} isDisplay={this.state.isDisplay}/>
 						<Information time={this.state.time} source={this.state.source}/>
 						<Content content={this.state.content}/> 

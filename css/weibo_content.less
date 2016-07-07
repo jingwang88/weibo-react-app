@@ -1,0 +1,120 @@
+.weibo-content {
+	width: 600px;
+	background-color: #fff;
+}
+.up-content {
+	margin: 10px;
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
+.header {
+	float: left;
+	padding: 5px;
+	width: 53px;
+	height: 53px;
+	border-radius: 50%;
+}
+.right-part {
+	float: left;
+	width: 85%;
+	margin: 5px;
+	p {
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+	}
+	.title {
+		height: 18px;
+		margin-bottom: 7px;
+		font-size: 14px;
+		padding-top: 5px;
+	}
+	.information {
+		height: 15px;
+		margin-bottom: 2px;
+		color: #808080;
+		font-size: 12px;
+		font-family: Arial, 'Microsoft YaHei';
+		a {
+			cursor: pointer;
+		}
+	}
+	.content {
+		color: #333;
+		font-size: 14px;
+		font-family: Arial, 'Microsoft YaHei';
+		line-height: 23px;
+	}
+	
+}
+.title {
+	a {
+		text-decoration: none;
+		i {
+			display: inline-block;
+			margin-left: 2px;
+			vertical-align: -2px;
+			width: 16px;
+			height: 14px;
+			background-image: url('../source/icon.png');
+		}
+	}
+	.nick-name {
+		color: #333;
+		font-weight: 700;
+	}
+	.identifiction {
+		background-position: 0 -75px;
+	}
+	.member {
+		background-position: -25px -75px;
+	}
+	.camera {
+		background-position: -25px -150px;
+	}
+}
+.function-banner {
+	width: 99%;
+	height: 33px;
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #eee;
+	list-style: none;
+	li {
+		float: left;
+		width: 25%;
+		line-height: 25px;
+		margin-top: 4px;
+		vertical-align: center;
+		text-align: center;
+		border-left: 1px solid #aaa;
+		color: #999;
+		font-size: 12px;
+	}
+	.collect {
+		width: 24%;
+		border-left: none;
+	}
+	&:after {
+		content: "";
+		display: block;
+		clear: both;
+		zoom: 1;
+	}
+}
+.fn-icon {
+	padding-right: 7px;
+	font-family: weiboIconRegular;
+	font-style: normal;
+	font-size: 15px;
+}
+.like-icon {
+	display: inline-block;
+	width: 12px;
+	height: 13px;
+	background-image: url("../source/icon.png");
+	background-position: -100px -25px;
+	-webkit-font-smoothing:antialiased;
+}

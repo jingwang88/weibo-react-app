@@ -1,15 +1,44 @@
 import React, {Component} from 'react';
 
 export default class Navigator extends React.Component  {
-	
+	constructor (props) {
+		super(props);
+		this.state = {
+			isShowPlaceHolder: true,
+			isShowAll: true
+		}
+	}
+	handleChange (event) {
+		if (event.target.value !== "") {
+			this.setState({
+				isShowPlaceHolder: false,
+			});
+		}
+	}
+	handleFocus(event) {
+		this.setState({
+			isShowPlaceHolder: true,
+			isShowAll: false
+		});
+	}
+	handleBlur (event) {
+		this.setState({
+			isShowPlaceHolder: true,
+			isShowAll: true
+		})
+		event.target.value = null;
+	}
 	render () {
+		let isShowPlaceHolder = this.state.isShowPlaceHolder, 
+			isShowAll = this.state.isShowAll;
 		return (
 			<div  className="navigator">
 				<div className="navi-container">
 					<a  className="weiboLogo" href="http://weibo.com/qiongwanger/home?topnav=1&wvr=6&mod=logo"><span></span></a>
 					<div className="search">
-						<input className="search-content" value={"大家都在搜："+this.props.hotWords}/>
+						<input className="search-content" onFocus={this.handleFocus.bind(this)} onChange={this.handleChange.bind(this)} onBlur={this.handleBlur.bind(this)}/>
 						<em className="search-icon">f</em>
+						<span className="place-holder" ref="placeHolder">{isShowPlaceHolder ? ((isShowAll ? "大家都在搜：" : "")+this.props.hotWords) : ""}</span>
 					</div>
 					<ul className="operation navigator-list">
 						<li className="write-weibo" title="请试一下键盘N键"><a>ß</a></li>

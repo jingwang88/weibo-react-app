@@ -12,15 +12,17 @@ import RightContentStore from '../stores/RightContentStore';
 function getWeiboReactState () {
 	return ({
 		name: NavigatorStore.getName(),
+		hotWords: NavigatorStore.getHotWords(),
+		hotSearchWords: NavigatorStore.getHotSearchWords(),
 		options: LeftContentStore.getOptions(),
 		hotWeibo: MiddleContentStore.getHotWeibo(),
-		weibos: MiddleContentStore.getweibos(),
+		weibos: MiddleContentStore.getWeibos(),
 		followNumber: RightContentStore.getStatusNumber()[0],
 		followerNumber: RightContentStore.getStatusNumber()[1],
 		weiboNumber: RightContentStore.getStatusNumber()[2],
 		newSongList: RightContentStore.getNewSongList(),
 		hotTopics: RightContentStore.getHotTopics(),
-		ffriendStatus: RightContentStore.getFFriendStauts(),
+		ffriendStatus: RightContentStore.getFFriendStatus(),
 		personCard: RightContentStore.getPersonCard(),
 		announcements: RightContentStore.getAnnouncements()
 	});
@@ -28,6 +30,7 @@ function getWeiboReactState () {
 export default class Layout extends Component {
 	constructor (props) {
 		super(props);
+		this.state = getWeiboReactState();
 	}
 
 	componentDidMount() {
@@ -50,6 +53,8 @@ export default class Layout extends Component {
 			<div className="container clearfix">
 				<Navigator 
 					name={this.state.name}
+					hotWords = {this.state.hotWords}
+					hotSearchWords = {this.state.hotSearchWords}
 				/>
 				<LeftContent 
 					options={this.state.options}
@@ -61,7 +66,7 @@ export default class Layout extends Component {
 							return (
 								<WeiboContentLayout weiboContent={weibo} key={++i}></WeiboContentLayout>
 							);
-						});
+						})
 					}
 				</div>
 				<RightContent 
@@ -72,14 +77,13 @@ export default class Layout extends Component {
 					hotTopics={this.state.hotTopics}
 					ffriendStatus={this.state.ffriendStatus}
 					personCard={this.state.personCard}
+					announcements = {this.state.announcements}
 				/>
 			</div>
 		);
 	}
 	_onChange () {
-		this.setState({
-			getWeiboReactState()
-		});
+		this.setState(getWeiboReactState());
 	}
 }
 

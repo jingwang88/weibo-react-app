@@ -71,10 +71,9 @@ var MiddleContentStore = Assign({}, EventEmitter.prototype, {
 	addChangeListener: function (callback) {
 		this.on("change", callback)
 	},
-	removeChangeListener： function (callback) {
+	removeChangeListener: function (callback) {
 		this.removeListener("change", callback);
 	}
-
 });
 
 AppDispatcher.register(function (action){

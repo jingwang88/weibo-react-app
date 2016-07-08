@@ -21,7 +21,7 @@
 		display: inline-block;
 		width: 130px;
 		height: 50px;
-		background-image: url('../source/weiboLogo.png');
+		background-image: url('../component/source/weiboLogo.png');
 		background-repeat: no-repeat;
 		background-position: 20px 10px;
 	}
@@ -36,8 +36,12 @@
 		width: 550px;
 		height: 22px;
 		padding-left: 10px;
+		border: 1px solid #cccccc;
+		background-color: rgb(242, 242, 245);
 		&:focus {
+			background-color: #fff;
 			outline: none;
+			border: 1px solid #fa7d3c;
 		}
 	}
 	.search-icon {
@@ -59,7 +63,46 @@
 		top: 4px;
 		left: 10px;
 		line-height: 22px;
-		color: #999;
+		color: #808080;
+	}
+	.hot-search-list {
+		width: 560px;
+		font-size: 12px;
+		list-style: none;
+		padding: 0;
+		margin-top: 2px;
+		background-color: #fff;
+		border: 1px solid rgba(200, 200, 200, 0.2);
+		.hot-search-word {
+			width: 511px;
+			padding:9px 36px 9px 13px;
+			color: #333;
+			&:hover {
+				color: #eb7350;
+				background-color: rgb(242, 242, 245);
+				cursor: pointer;
+			}
+			em {
+				display: inline-block;
+				width: 12px;
+				height: 14px;
+				padding-left: 4px;
+				margin-right: 5px;
+				border-radius: 50%;
+				font-style: normal;
+				color: #fff !important;
+				background-color: #696e78;
+			}
+		}
+		li:nth-child(1) {
+			color: #df3e3e;
+		}
+		li:nth-child(2) em {
+			background-color: #fa7d3c;
+		}
+		li:nth-child(3) em {
+			background-color: #eb7350;
+		}
 	}
 }
 .navigator-list {
@@ -67,9 +110,12 @@
 	list-style: none;
 	margin-top: 10px;
 	li {
+		font-family: "Microsoft YaHei";
 		float: right;
-		font-family: weiboIconRegular;
 		color: #333;
+		em{
+			font-family: weiboIconRegular;
+		}
 		&:hover {
 			cursor: pointer;
 			color: #eb7350;
@@ -80,6 +126,7 @@
 	padding: 0px;
 	border-left: 1px solid #999;
 	li {
+		font-family: weiboIconRegular;
 		font-size: 22px;
 		width: 20px;
 		min-width: 20px;
@@ -105,13 +152,13 @@
 		a {
 			vertical-align: center;
 			line-height: 26px;
-		}
-		em {
-			display: inline-block;
-			vertical-align: -2px;
-			width: 25px;
-			font-size: 22px;
-			font-style: normal;
+			em {
+				display: inline-block;
+				vertical-align: -2px;
+				width: 25px;
+				font-size: 22px;
+				font-style: normal;
+			}
 		}
 	}
 	.user-page {

@@ -116,21 +116,22 @@
 		em{
 			font-family: weiboIconRegular;
 		}
-		&:hover {
-			cursor: pointer;
-			color: #eb7350;
-		}
 	}
 }
 .operation {
 	padding: 0px;
 	border-left: 1px solid #999;
 	li {
+		position: relative;
 		font-family: weiboIconRegular;
 		font-size: 22px;
 		width: 20px;
 		min-width: 20px;
 		margin-left: 21px;
+		a:hover {
+			cursor: pointer;
+			color: #eb7350;
+		}
 	}
 	.write-weibo {
 		color: #fff;
@@ -160,9 +161,112 @@
 				font-style: normal;
 			}
 		}
+		&:hover {
+			cursor: pointer;
+			color: #eb7350;
+		}
 	}
 	.user-page {
 		width: 85px;
 		min-width: 85px;
 	}
 }
+.message-inform {
+	position: absolute;
+	display: none;
+	left: -125px;
+	top: 20px;
+	padding: 2px !important;
+	font-size: 12px !important;
+	font-family: "Microsoft YaHei" !important;
+	.triangle {
+		position: relative;
+		left: 125px;
+		width: 0;
+		height: 0;
+		border-bottom: 8px solid rgba(200, 200, 200, 0.2);
+		border-left: 8px solid rgba(0, 0, 0, 0);
+		border-right: 8px solid rgba(0, 0, 0, 0);
+	}
+	.inform {
+		list-style: none;
+		padding: 2px;
+		border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+		background-color: #fff;
+		li {
+			float: none;
+			width: 140px;
+			margin: 0;
+			padding-left: 12px;
+			font-size: 12px !important;
+			font-family: "Microsoft YaHei" !important;
+			line-height: 30px;
+			&:hover {
+				cursor: pointer;
+				background-color: rgb(242, 242, 245);
+			}
+		}
+	}
+	.message-inform-setting {
+		width: 152px;
+		height: 30px;
+		text-align: center;
+		line-height: 32px;
+		border-bottom: none !important;
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(242, 242, 245);
+		}
+	}
+}
+
+.setting {
+	position: absolute;
+	display: none;
+	left: -80px;
+	top: 20px;
+	padding: 2px !important;
+	font-size: 12px !important;
+	font-family: "Microsoft YaHei" !important;
+	.triangle {
+		position: relative;
+		left: 80px;
+		width: 0;
+		height: 0;
+		border-bottom: 8px solid rgba(200, 200, 200, 0.2);
+		border-left: 8px solid rgba(0, 0, 0, 0);
+		border-right: 8px solid rgba(0, 0, 0, 0);
+	}
+	.setting-list {
+		list-style: none;
+		padding: 2px;
+		border-bottom: 1px solid rgba(200, 200, 200, 0.2);
+		background-color: #fff;
+		li {
+			float: none;
+			width: 85px;
+			margin: 0;
+			padding-left: 12px;
+			font-size: 12px !important;
+			font-family: "Microsoft YaHei" !important;
+			line-height: 30px;
+			&:hover {
+				cursor: pointer;
+				background-color: rgb(242, 242, 245);
+			}
+		}
+	}
+	.setting-logout {
+		width: 105px;
+		height: 30px;
+		text-align: center;
+		line-height: 32px;
+		background-color: #fff;
+		border-bottom: none !important;
+		&:hover {
+			cursor: pointer;
+			background-color: rgb(242, 242, 245);
+		}
+	}
+}
+

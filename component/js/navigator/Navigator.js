@@ -6,7 +6,7 @@ export default class Navigator extends React.Component  {
 		this.state = {
 			isShowPlaceHolder: true,
 			isShowAll: true
-		}
+		};
 	}
 	handleChange (event) {
 		if (event.target.value !== "") {
@@ -26,17 +26,37 @@ export default class Navigator extends React.Component  {
 		this.setState({
 			isShowPlaceHolder: true,
 			isShowAll: true
-		})
+		});
 		event.target.value = null;
 	}
-	componentDidMount () {
-		this.refs.index2.style.backgroundColor = "#df3e3e";
-		this.refs.index3.style.backgroundColor = "#fa7d3c";
-		this.refs.forwardFullList.style.color = "#eb7350";
+	handleMessageMouseOver () {
+		this.refs.messageInfo.style.display = "block";
+	}
+	handleInformMouseOver () {
+		this.refs.messageInfo.style.display = "block";
+	}
+	handleMessageMouseOut() {
+		this.refs.messageInfo.style.display = "none";
+	}
+	handleInformMouseOut () {
+		this.refs.messageInfo.style.display = "none";
+	}
+	handleSetUpMouseOver () {
+		this.refs.setting.style.display = "block";
+	}
+	handleSettingMouseOver () {
+		this.refs.setting.style.display = "block";
+	}
+	handleSetUpMouseOut() {
+		this.refs.setting.style.display = "none";
+	}
+	handleSettingMouseOut () {
+		this.refs.setting.style.display = "none";
 	}
 	render () {
 		let isShowPlaceHolder = this.state.isShowPlaceHolder, 
 			isShowAll = this.state.isShowAll,
+			isDisplayMessageInform= this.state.isDisplayMessageInform,
 			index = 1;
 		return (
 			<div  className="navigator">
@@ -61,8 +81,39 @@ export default class Navigator extends React.Component  {
 					</div>
 					<ul className="operation navigator-list">
 						<li className="write-weibo" title="请试一下键盘N键"><a>ß</a></li>
-						<li className="set-up"><a>*</a></li>
-						<li className="related-info"><a>I</a></li>
+						<li className="set-up" onMouseOver={this.handleSetUpMouseOver.bind(this)} onMouseOut={this.handleSetUpMouseOut.bind(this)}>
+							<a>*</a>
+							<div className="setting" ref="setting" onMouseOver={this.handleSettingMouseOver.bind(this)} onMouseOut={this.handleSettingMouseOut.bind(this)}>
+								<div className="triangle"></div>
+								<ul className="setting-list set">
+									<li>账号设置</li>
+									<li>会员中心</li>
+									<li>v认证</li>
+									<li>账号安全</li>
+									<li>隐私设置</li>
+									<li>消息设置</li>
+									<li>帮助中心</li>
+								</ul>
+								<div className="setting-logout set">退出</div>
+							</div>	
+						</li>
+						<li className="related-info" onMouseOver={this.handleMessageMouseOver.bind(this)} onMouseOut={this.handleMessageMouseOut.bind(this)}>
+							<a>I</a>
+							<div className="message-inform" ref="messageInfo" onMouseOver={this.handleInformMouseOver.bind(this)} onMouseOut={this.handleInformMouseOut.bind(this)}>
+								<div className="triangle"></div>
+								<ul className="message-inform-retatedme inform">
+									<li>@我</li>
+									<li>评论</li>
+									<li>赞</li>
+								</ul>
+								<ul className="message-inform-message inform">
+									<li>私信</li>
+									<li>未关注人私信</li>
+									<li>群通知</li>
+								</ul>
+								<div className="message-inform-setting inform">消息设置</div>
+							</div>	
+						</li>
 					</ul>
 					<ul className="forward navigator-list">
 						<li className="user-page"><a><em>H</em>{this.props.name}</a></li>

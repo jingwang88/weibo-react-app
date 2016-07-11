@@ -5,7 +5,7 @@ import Assign from 'object-assign';
 
 var CHANGE_EVENT = "change";
 var EventEmitter = Event.EventEmitter;
-var options = ["娱乐", "媒体", "美女", "正能量", "购物", "旅游", "欧美", "字幕组", "明星"];
+var options = ["娱乐", "媒体", "美女", "正能量", "购物", "旅游", "欧美", "字幕组", "明星", "体育", "科技", "生活", "旅游"];
 
 var LeftContentStore = Assign({}, EventEmitter.prototype, {
 	getOptions: function () {

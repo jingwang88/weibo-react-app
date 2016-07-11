@@ -22,7 +22,7 @@ export default class NewSongList extends Component {
 		var i = 0; 
 		return (
 			<div className="new-song-list right_content_block">
-				<div className="list-title">亚洲好书榜实时趋势</div>
+				<div className="list-title"><span>亚洲好书榜实时趋势</span></div>
 				<ul className="list-rank">
 				{
 					this.props.newSongList.map((newSongList) => {

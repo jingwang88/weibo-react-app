@@ -34,19 +34,19 @@ export default class Layout extends Component {
 	}
 
 	componentDidMount() {
-		NavigatorStore.addChangeListener(this._onChange);
-		LeftContentStore.addChangeListener(this._onChange);
-		MiddleContentStore.addChangeListener(this._onChange);
-		RightContentStore.addChangeListener(this._onChange);
+		NavigatorStore.addChangeListener(this._onChange.bind(this));
+		LeftContentStore.addChangeListener(this._onChange.bind(this));
+		MiddleContentStore.addChangeListener(this._onChange.bind(this));
+		RightContentStore.addChangeListener(this._onChange.bind(this));
 	}
 
 	componentWillUnmount() {
-		NavigatorStore.removeChangeListener(this._onChange);
-		LeftContentStore.removeChangeListener(this._onChange);
-		MiddleContentStore.removeChangeListener(this._onChange);
-		RightContentStore.removeChangeListener(this._onChange);
+		NavigatorStore.removeChangeListener(this._onChange.bind(this));
+		LeftContentStore.removeChangeListener(this._onChange.bind(this));
+		MiddleContentStore.removeChangeListener(this._onChange.bind(this));
+		RightContentStore.removeChangeListener(this._onChange.bind(this));
 	}
-
+	
 	render () {
 		let i = 0;
 		return (
@@ -85,5 +85,6 @@ export default class Layout extends Component {
 	_onChange () {
 		this.setState(getWeiboReactState());
 	}
+
 }
 

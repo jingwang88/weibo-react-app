@@ -2,9 +2,12 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 import Event from 'events';
 import WeiboReactConstants from '../constants/WeiboReactConstants';
 import Assign from 'object-assign';
+import Data from '../data/data';
 
 var CHANGE_EVENT = "change",
-EventEmitter = Event.EventEmitter;
+	EventEmitter = Event.EventEmitter,
+	index = 8,
+	dealHotTopics = parseNumber(Data.hotTopics);
 
 // followNumber followerNumber weiboNumber
 var statusNumber = [143, 100, 122],
@@ -28,36 +31,8 @@ var statusNumber = [143, 100, 122],
 			rankScore: "1072681"
 		}
 	],
-	hotTopics = [
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-		{
-			name: '几时放假可视对讲',
-			hotDegree: 10000
-		},
-	],
+	hotTopics = [dealHotTopics[0], dealHotTopics[1], dealHotTopics[2], dealHotTopics[3], 
+				 dealHotTopics[4], dealHotTopics[5], dealHotTopics[6], dealHotTopics[7] ],
 	ffriendStatus = {
 		latestFollower: '@sdjfak',
 		latestFollowerNum: 25000,
@@ -86,6 +61,29 @@ var statusNumber = [143, 100, 122],
 		}
 	],
 	announcements = ['全国辟谣平台', '首都互联网协会发布坚守七条底线倡议书'];
+
+
+
+function parseNumber (data) {
+	for (var i=0; i<data.length; i++) {
+		if (data[i].hotDegree < 10000) {
+			data[i].hotDegree = data[i].hotDegree + "";
+		}else if (data[i].hotDegree <100000000) {
+			data[i].hotDegree = parseInt(data[i].hotDegree/10000) + "万";
+		}else {
+			data[i].hotDegree = (data[i].hotDegree/100000000).toFixed(1) + "亿";
+		}
+	}
+	return data;
+}
+function refreshHotTopics() {
+	var i = 0, arr=[];
+	while (i++<8)  {
+		arr.push(dealHotTopics[index]);
+		index = index>=dealHotTopics.length ? 0 : (index+1);
+	}
+	hotTopics = arr;
+}
 
 
 var RightContentStore = Assign({}, EventEmitter.prototype, {
@@ -118,8 +116,21 @@ var RightContentStore = Assign({}, EventEmitter.prototype, {
 	}
 });
 
-AppDispatcher.register(function (action) {
+AppDispatcher.register(function (playload) {
+	var action = playload.action;
 
+	switch(action.actionType) {
+		// 刷新热门话题
+		case WeiboReactConstants.REFRESH_HOTTOPICS:
+			refreshHotTopics();
+			break;
+
+		default:
+			return true;
+	}
+
+	RightContentStore.emitChange();
+	return true;
 });
 
 export default RightContentStore;

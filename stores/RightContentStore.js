@@ -2,7 +2,7 @@ import AppDispatcher from '../dispatcher/AppDispatcher';
 import Event from 'events';
 import WeiboReactConstants from '../constants/WeiboReactConstants';
 import Assign from 'object-assign';
-import Data from '../data/data';
+import Data from '../data/Data';
 
 var CHANGE_EVENT = "change",
 	EventEmitter = Event.EventEmitter,

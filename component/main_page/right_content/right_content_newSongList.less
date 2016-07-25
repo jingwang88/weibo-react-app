@@ -1,0 +1,92 @@
+.new-song-list {
+	width: 230px;
+	background-color: #fff;
+}
+.list-title {
+	position: relative;
+	width: 220px;
+	padding-left: 10px;
+	line-height: 39px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #eb7350;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.list-rank {
+	font-size: 14px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.song-info {
+	width: 220px;
+	margin: 0 auto;
+	color: #333;
+	font-size: 14px;
+	.song-description {
+		.index {
+			display: inline-block;
+			width: 14px;
+			height: 18px;
+			margin: 0 8px;
+			padding-left: 5px;
+			color: #fff;
+			background-color: #df3e3e;
+			border-radius: 50%;
+		}
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.song-details {
+		img {
+			float: left;
+			width: 75px;
+			height: 100px;
+			
+		}
+		.song-details-content {
+			float: left;
+			width: 130px;
+			margin: 0 5px;
+			padding: 8px 0;
+			.song-description {
+				p {
+					margin: 0;
+					font-weight: bold;
+					&:hover {
+						cursor: pointer;
+						color: #df3e3e;
+					}
+				}
+				.index {
+					margin-left: 0px;
+					margin-right: 5px;
+				}
+				border: none;
+			}
+			.song-score {
+				margin-top: 20px;
+			}
+		}
+		&:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+}
+.more {
+	width: 230px;
+	line-height: 37px;
+	text-align: center;
+	font-size: 14px;
+	em {
+		font-family: "weiboIconRegular" !important;
+		font-style: normal;
+		margin-left: 5px;
+	}
+	&:hover {
+		cursor: pointer;
+		color: #df3e3e;
+	}
+}

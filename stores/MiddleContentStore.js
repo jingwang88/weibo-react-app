@@ -77,7 +77,7 @@ var MiddleContentStore = Assign({}, EventEmitter.prototype, {
 });
 
 AppDispatcher.register(function (action){
-
+	
 });
 
 export default MiddleContentStore;

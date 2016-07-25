@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import Navigator from './js/navigator/Navigator';
-import WeiboContentLayout from './js/weibo_content/WeiboContentLayout';
-import LeftContent from './js/Left_content/LeftContent';
-import WeiboInput from './js/create_weibo/WeiboInput';
-import RightContent from './js/right_content/RightContent';
+import Navigator from './main_page/navigator/Navigator';
+import WeiboContentLayout from './main_page/weibo_content/WeiboContentLayout';
+import LeftContent from './main_page/left_content/LeftContent';
+import WeiboInput from './main_page/create_weibo/WeiboInput';
+import RightContent from './main_page/right_content/RightContent';
 import NavigatorStore from '../stores/NavigatorStore';
 import LeftContentStore from '../stores/LeftContentStore';
 import MiddleContentStore from '../stores/MiddleContentStore';
 import RightContentStore from '../stores/RightContentStore';
+import DiscoveryPage from './discovery_page/DiscoveryPage';
 
 function getWeiboReactState () {
 	return ({
@@ -27,6 +28,7 @@ function getWeiboReactState () {
 		announcements: RightContentStore.getAnnouncements()
 	});
 }
+
 export default class Layout extends Component {
 	constructor (props) {
 		super(props);
@@ -51,7 +53,7 @@ export default class Layout extends Component {
 		let i = 0;
 		return (
 			<div className="container clearfix">
-				<Navigator 
+			{/*	<Navigator 
 					name={this.state.name}
 					hotWords = {this.state.hotWords}
 					hotSearchWords = {this.state.hotSearchWords}
@@ -78,6 +80,9 @@ export default class Layout extends Component {
 					ffriendStatus={this.state.ffriendStatus}
 					personCard={this.state.personCard}
 					announcements = {this.state.announcements}
+				/>*/}
+				<DiscoveryPage
+
 				/>
 			</div>
 		);

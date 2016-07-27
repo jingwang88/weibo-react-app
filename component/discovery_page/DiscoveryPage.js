@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import LeftCategory from './left_category/LeftCategory';
+import RightCategory from './right_category/RightCategory';
 
 export default class DiscoveryPage extends React.Component {
     constructor (props) {
@@ -14,6 +15,9 @@ export default class DiscoveryPage extends React.Component {
         return (
             <div>
                 <LeftCategory />
+                <RightCategory 
+                    category={this.props.category}
+                />
             </div>
         );
     }

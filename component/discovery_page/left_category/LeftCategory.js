@@ -17,22 +17,22 @@ export default class LeftCategory extends React.Component {
             this.setState({
                 onCategoryNumber: target.dataset.index
             });
-            var onCategoryEle = document.getElementsByClassName('category-item')[target.dataset.index];
+            var onCategoryEle = document.getElementsByClassName('left-category-item')[target.dataset.index];
             onCategoryEle.className += " onCategoryEle";
            
         }
     }
 
     componentDidMount () {
-        var onCategoryEle = document.getElementsByClassName('category-item')[this.state.onCategoryNumber];
+        var onCategoryEle = document.getElementsByClassName('left-category-item')[this.state.onCategoryNumber];
         var leftCategory = document.getElementsByClassName('left-category')[0];
         onCategoryEle.className += " onCategoryEle";
         leftCategory.addEventListener('click', this.handleCategoryItemClick.bind(this));
     }
 
     componentWillUpdate () {
-        var onCategoryEle = document.getElementsByClassName('category-item')[this.state.onCategoryNumber];
-        onCategoryEle.className = "category-item";
+        var onCategoryEle = document.getElementsByClassName('left-category-item')[this.state.onCategoryNumber];
+        onCategoryEle.className = "left-category-item";
     }
 
     render () {
@@ -40,7 +40,7 @@ export default class LeftCategory extends React.Component {
             <ul className="left-category">
                 {
                     this.categoryItems.map((item, index) => {
-                        return <li key={index} data-index={index} className="category-item"><a>{item}</a></li>
+                        return <li key={index} data-index={index} className="left-category-item"><a>{item}</a></li>
                     })
                 }
             </ul>

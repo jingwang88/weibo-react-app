@@ -1,0 +1,41 @@
+@hoverColor: #df3e3e;
+.hot-weibo-category {
+    position: absolute;
+    top:200px;
+    left: 500px;
+    width: 230px;
+    background-color: #fff;
+    .hot-weibo-category-title {
+        line-height: 37px;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: 500;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .hot-weibo-category-list {
+        margin: 0;
+        font-size: 12px;
+    }
+}
+ .right-category-item {
+    float: left;
+    width: 100px;
+    margin-left: 15px;
+    line-height: 25px;
+    em {
+        display: inline-block;
+        width: 12px;
+        height: 14px;
+        vertical-align: middle;
+        font-style: normal;
+        margin-right: 5px;
+        background-color: #555;
+    }
+    span {
+        color: #555;
+         &:hover {
+            color: @hoverColor;
+        }
+    }
+   
+}

@@ -4,7 +4,7 @@ import Event from 'events';
 import Assign from 'object-assign';
 
 var CHANGE_EVENT = "change";
-var EventEmitter = new Event.EventEmitter;
+var EventEmitter = Event.EventEmitter;
 var category = [
     {href: "#", text: "视频"}, {href: "#", text: "青岛"}, {href: "#", text: "社会"}, {href: "#", text: "国际"}, {href: "#", text: "科技"}, {href: "#", text: "科普"}, {href: "#", text: "数码"}, {href: "#", text: "财经"}, 
     {href: "#", text: "股市"}, {href: "#", text: "明星"}, {href: "#", text: "综艺"}, {href: "#", text: "电视剧"}, {href: "#", text: "电影"}, {href: "#", text: "音乐"}, {href: "#", text: "汽车"}, {href: "#", text: "体育"},

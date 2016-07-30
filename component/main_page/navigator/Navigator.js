@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Router, Route, IndexRoute,hashHistory, Link } from 'react-router';
+import { Router, Route, IndexRoute,hashHistory, Link} from 'react-router';
 require('./navigator.less');
 
 export default class Navigator extends React.Component  {
@@ -118,10 +118,10 @@ export default class Navigator extends React.Component  {
 						</li>
 					</ul>
 					<ul className="forward navigator-list">
-						<li className="user-page"><Link ><em>H</em>{this.props.name}</Link></li>
-						<li className="game"><Link ><em>G</em>游戏</Link></li>
-						<li className="find-something"><Link to="/DisPage"><em>F</em>发现</Link></li>
-						<li className="first-page"><Link to="/MainPage"><em>E</em>首页</Link></li>
+						<li className="user-page"><Link to={""}><em>H</em>{this.props.name}</Link></li>
+						<li className="game"><Link to={""}><em>G</em>游戏</Link></li>
+						<li className="find-something"><Link to={"/DisPage"}><em>F</em>发现</Link></li>
+						<li className="first-page"><Link to={"/MainPage"}><em>E</em>首页</Link></li>
 					</ul>
 				</div>
 			</div>

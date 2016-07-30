@@ -112,7 +112,7 @@ var RightContentStore = Assign({}, EventEmitter.prototype, {
 		this.on("change", callback);
 	},
 	removeChangeListener: function (callback) {
-		this.removeListener("change");
+		this.removeListener(CHANGE_EVENT, callback);
 	}
 });
 

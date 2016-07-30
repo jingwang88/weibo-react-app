@@ -10,8 +10,8 @@ require('../css/common.less');
 
 render((
     <Router history={hashHistory}>
-        <Route path='/' component={App}>
-            <IndexRoute component={MainPage}/>
+        <Route path='/' component={App}>``
+            <IndexRoute component={MainPage} />
             <Route path='/MainPage' component={MainPage}></Route>
             <Route path='/DisPage' component={DisPage}></Route>
         </Route>

@@ -19,6 +19,7 @@ export default class LeftContent extends React.Component {
 	}
 
 	componentWillUnmount () {
+		let downCategory= document.getElementsByClassName("down-category")[0];
 		downCategory.removeEventListener("mousewheel", this.handleMouseWheel.bind(this));
 	}
 
